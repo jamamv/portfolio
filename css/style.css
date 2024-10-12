@@ -1,35 +1,71 @@
+/* styles.css */
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box; /* This makes the padding and border included in the element's total width and height */
 }
 
 header {
-    background-color: #333;
+    background-color: #4CAF50; /* Green header */
     color: white;
     padding: 20px;
     text-align: center;
-}
-
-nav a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    display: inline-block;
-}
-
-section {
-    padding: 40px;
-    margin: 20px 0;
+    height: 100px; /* Fixed height for header */
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #333;
+    padding: 10px;
+    background-color: #4CAF50; /* Match header color */
     color: white;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
+    height: 50px; /* Fixed height for footer */
+    left: 0;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+    background-color: white; /* White background for content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 70px; /* Space for footer */
+    min-height: calc(100vh - 150px); /* Ensure enough space for header and footer */
+    overflow: auto; /* Ensure content scrolls if too large */
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Center the navigation */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li a {
+    font-size: 25px; /* Change this value to whatever size you prefer */
+    text-decoration: none; /* Optional: remove underline from links */
+    color: white; /* Change this to your desired color */
+}
+
+nav ul li {
+    display: inline; /* Make the list items display inline */
+    margin-right: 20px; /* Adjust spacing between items */
+}
+
+
+nav a {
+    color: white; /* White text for links */
+    text-decoration: none;
+    font-size: 18px; /* Increased font size for navigation */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underline on hover */
 }
